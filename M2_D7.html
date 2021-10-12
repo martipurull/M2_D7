@@ -28,6 +28,61 @@
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
+
+        /* exercise 1 */
+        h1 {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 2 */
+        nav * {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 3 */
+        .jumbotron p:last-of-type {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 4 */
+        div.blog-post:first-of-type {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 5 */
+        div.nav-scroller nav a:nth-child(even) {
+            box-shadow: -8px 8px 8px #1b50c4;
+        }
+
+        /* exercise 6 */
+        div.blog-post:last-of-type {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 7 */
+        ol.mb-0 li {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 8 */
+        div.blog-post:nth-of-type(2) h2+p a {
+            border: 4px solid #ffd614;
+        }
+
+        /* exercise 9 */
+        p:last-child a:not(.text-white) {
+            border: 4px solid crimson;
+        }
+
+        /* exercise 10 */
+        footer {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3981967787114846) 25%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .newJsEl {
+            box-shadow: 8px -8px 8px #cf5d1b;
+        }
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -404,6 +459,12 @@
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
+
+        //   exercise 11
+        const addNavBarLink = function () {
+            const navBar = document.querySelector('nav-scroller').document.querySelector('nav')
+        }
+
     </script>
 </body>
 
