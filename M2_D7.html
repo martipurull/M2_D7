@@ -385,7 +385,7 @@
                 <!-- /.blog-post -->
 
                 <nav class="blog-pagination">
-                    <a class="btn btn-outline-primary" href="#">Older</a>
+                    <a class="btn btn-outline-primary" href="#" onclick="removeLastBlogPost()">Older</a>
                     <a class="btn btn-outline-secondary" href="#" tabindex="-1" aria-disabled="true"
                         onclick="addNewBlogPost()">Newer</a>
                 </nav>
@@ -532,6 +532,12 @@
             newBlogPostTitle.classList.add('blog-post-title')
             newBlogPostTitle.innerText = 'Newer Blog Post'
             newBlogPost.appendChild(newBlogPostTitle)
+        }
+
+        //   exercise 18
+        const removeLastBlogPost = function () {
+            let blogContainer = document.getElementsByClassName('blog-main')[0]
+            blogContainer.removeChild(blogContainer.children[blogContainer.children.length - 1])
         }
 
 
