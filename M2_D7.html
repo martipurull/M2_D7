@@ -386,7 +386,8 @@
 
                 <nav class="blog-pagination">
                     <a class="btn btn-outline-primary" href="#">Older</a>
-                    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+                    <a class="btn btn-outline-secondary" href="#" tabindex="-1" aria-disabled="true"
+                        onclick="addNewBlogPost()">Newer</a>
                 </nav>
             </div>
             <!-- /.blog-main -->
@@ -518,9 +519,21 @@
                 let textLeft = blogInnerText.innerText.slice(49)
                 blogInnerText.innerText = textLeft
             }
-            console.log(blogPosts)
         }
         removeFirst50Chars()
+
+        //   exercise 18
+        const addNewBlogPost = function () {
+            let blogContainer = document.getElementsByClassName('blog-main')[0]
+            let newBlogPost = document.createElement('div')
+            newBlogPost.classList.add('blog-post')
+            blogContainer.appendChild(newBlogPost)
+            let newBlogPostTitle = document.createElement('h2')
+            newBlogPostTitle.classList.add('blog-post-title')
+            newBlogPostTitle.innerText = 'Newer Blog Post'
+            newBlogPost.appendChild(newBlogPostTitle)
+        }
+
 
     </script>
 </body>
