@@ -534,12 +534,22 @@
             newBlogPost.appendChild(newBlogPostTitle)
         }
 
-        //   exercise 18
+        //   exercise 19
         const removeLastBlogPost = function () {
             let blogContainer = document.getElementsByClassName('blog-main')[0]
             blogContainer.removeChild(blogContainer.children[blogContainer.children.length - 1])
         }
-
+        //   exercise 20
+        const authorAlert = function () {
+            const authors = document.getElementsByClassName('blog-post-meta')
+            console.log(authors)
+            for (let i = 0; i < authors.length; i++) {
+                authors[i].addEventListener('mouseover', function () {
+                    alert(authors[i].children[0].innerText)
+                })
+            }
+        }
+        authorAlert()
 
     </script>
 </body>
