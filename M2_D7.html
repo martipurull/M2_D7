@@ -81,7 +81,7 @@
         }
 
         .newJsEl {
-            box-shadow: 8px -8px 8px #cf5d1b;
+            background-color: #e99d71 !important;
         }
     </style>
     <meta charset="utf-8" />
@@ -462,8 +462,65 @@
 
         //   exercise 11
         const addNavBarLink = function () {
-            const navBar = document.querySelector('nav-scroller').document.querySelector('nav')
+            const navBar = document.querySelector('nav')
+            const newNavBarElement = document.createElement('a')
+            newNavBarElement.innerText = 'New Link'
+            newNavBarElement.classList.add('p-2')
+            newNavBarElement.classList.add('text-muted')
+            newNavBarElement.setAttribute('href', '#')
+            navBar.appendChild(newNavBarElement)
         }
+        addNavBarLink()
+
+        //   exercise 12
+        const changeTitleColour = function () {
+            const mainTitle = document.querySelector('h1')
+            mainTitle.style.color = 'crimson'
+        }
+        changeTitleColour()
+
+        //   exercise 13
+        const changeJumbotronColour = function () {
+            const jumbotron = document.querySelector('.jumbotron')
+            jumbotron.classList.remove('bg-dark')
+            jumbotron.classList.add('newJsEl')
+        }
+        changeJumbotronColour()
+
+        //   exercise 14
+        const removeLinksFromElsewhere = function () {
+            let elsewhereList = document.querySelectorAll('ol')[2]
+            elsewhereList.innerHTML = ''
+
+        }
+        removeLinksFromElsewhere()
+
+        //   exercise 15
+        const changeJumbotronH1ColumnSize = function () {
+            const jumbotronColumnDiv = document.getElementsByClassName('col-md-6')[0]
+            jumbotronColumnDiv.classList.remove('col-md-6')
+            jumbotronColumnDiv.classList.add('col-md-10')
+        }
+        changeJumbotronH1ColumnSize()
+
+        //   exercise 16
+        const removeSearchIcon = function () {
+            const iconContainer = document.querySelector('header').querySelector('div').querySelectorAll('div')[2]
+            iconContainer.removeChild(iconContainer.children[0])
+        }
+        removeSearchIcon()
+
+        //   exercise 17
+        const removeFirst50Chars = function () {
+            const blogPosts = document.getElementsByClassName('blog-post')
+            for (blog of blogPosts) {
+                let blogInnerText = blog.children[2]
+                let textLeft = blogInnerText.innerText.slice(49)
+                blogInnerText.innerText = textLeft
+            }
+            console.log(blogPosts)
+        }
+        removeFirst50Chars()
 
     </script>
 </body>
