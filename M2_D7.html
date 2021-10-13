@@ -505,9 +505,14 @@
         changeJumbotronH1ColumnSize()
 
         //   exercise 16
+        // const removeSearchIcon = function () {
+        //     const iconContainer = document.querySelector('header').querySelector('div').querySelectorAll('div')[2]
+        //     iconContainer.removeChild(iconContainer.children[0])
+        // }
+        // removeSearchIcon()
         const removeSearchIcon = function () {
-            const iconContainer = document.querySelector('header').querySelector('div').querySelectorAll('div')[2]
-            iconContainer.removeChild(iconContainer.children[0])
+            const searchIcon = document.querySelector('header > div > div > a > svg')
+            searchIcon.innerHTML = ''
         }
         removeSearchIcon()
 
